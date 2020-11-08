@@ -105,7 +105,7 @@ Since we have many features, we chose to use multiple linear regression model to
 The advantages and limitation of Multiple Linear Regression is listed as below:
 
 ### Feature Selection 
-We reduced the number of features to ( ) from 80 so our model will not get confused. We first filtered features based on common sense then we check the selected features with  histogram to see if they are normally distributed in order to be used in linear regression model. After the features are finalized, we assign it as X whereas SalesPrice is our target and is assigned to y. 
+We reduced the number of features to 7 from 80 so our model will not get confused. We first created a heatmap and selected top 7 features that are most related to Sales Price.  We then check the selected features using histogram to see if they are normally distributed in order to be used in linear regression model. After the features are finalized, we assign them as X, whereas SalesPrice(target) is assigned to y. 
 
 
 
