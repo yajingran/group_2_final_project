@@ -93,6 +93,26 @@ YrSold: Year Sold
 SaleType: Type of sale
 SaleCondition: Condition of sale
 
+
+### Export Transform and Load
+1) EXTRACT
+- Extracted from csv files
+- Filtered to compare features affecting house prices
+- Evaluated possible correlations between (ten features) and house prices
+- Explored ...
+
+
+
+2) TRANSFORM
+-
+
+
+3) LOAD 
+- Loaded data frames into tables using PostgreSQL
+- Normalized data in SQL
+- Joined tables and exported to .CSV for Machine Learning*
+
+
 ### Data Exploration 
 * Check the dataset and better understand it
 * check the missing values and duplicates
