@@ -103,6 +103,12 @@ SaleCondition: Condition of sale
 ### Machine Learning Model
 Since we have many features, we chose to use multiple linear regression model to predict the price. Multiple linear regression estimates the relationship between several independent variables (features) and one dependent variable.
 The advantages and limitation of Multiple Linear Regression is listed as below:
+<br /> Advantages
+<br /> > allows us to determine the relative influence of more than one predictor variables to the target variable.
+<br /> > enables us to identify outliers (find out the features that have a strong correlations and the ones that do not)
+<br /> Limitations
+<br /> > the size of the sample may lead to the pitfall of incomplete data
+<br /> > predictor values provide insights for limited features
 
 ### Feature Selection 
 We reduced the number of features to 7 from 80 so our model will not get confused. We first created a heatmap and selected top 7 features that are most related to Sales Price.  We then check the selected features using histogram to see if they are normally distributed in order to be used in linear regression model. After the features are finalized, we assign them as X, whereas SalesPrice(target) is assigned to y. 
