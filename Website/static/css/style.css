@@ -1,0 +1,14 @@
+body {
+ 
+    color: #f7f7f7;
+  }
+ 
+  .jumbotron {
+      padding-top: 240px;
+      padding-bottom: 400px;
+    background-image: url("../images/real_estate.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+    
+  }
+  
