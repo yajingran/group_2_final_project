@@ -4,8 +4,8 @@ body {
   }
  
   .jumbotron {
-      padding-top: 240px;
-      padding-bottom: 400px;
+      padding-top: 200px;
+      padding-bottom: 300px;
     background-image: url("../images/real_estate.jpg");
     background-size: 100% 100%;
     text-align: center;
@@ -29,7 +29,8 @@ body {
     top:-140px;
   }
 
-  .jumbotron {
-    top:-100px;
+  .span {
+    position: relative;
+    top: -100px;
   }
-  
+
