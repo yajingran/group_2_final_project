@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>House Prices Prediction</title>
+            <link
+             rel="stylesheet"
+             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+             crossorigin="anonymous"
+           />
+           <link rel="stylesheet" href="static/css/style.css">
+           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        </head>
+ 
+<!--Navigation bar-->
+<body class="siteScrolled" data-new-gr-c-s-check-loaded="14.983.0">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light" id="navMain">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" drop-menu-right>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-blue" href="index.html">
+                            Home 
+                            <span class="sr-only"(current)></span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dashboards
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="right:auto; left: auto;">
+                           <a class="dropdown-item" href="https://github.com/yajingran/group_2_final_project">Correlation</a>
+                           <a class="dropdown-item" href="Hpp/dashboard2.html">Distribution</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link">Machine Learning</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://github.com/yajingran/group_2_final_project">
+                        Github Repository</a>
+                    </li>
+                </ul>
+            <div class="navbar-brand" href="index.html">House Prices Prediction</a>
+            </div>
+        </nav>
+    </div>
+    <!--Jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4"><b>Canada's Home of Property</b></h1>
+        <p class="lead"  style="text-align:center"><b>Predict sales prices and practice feature engineering, RFs, and gradient boosting</b></p>
+ 
+        <div class="row">
+        <div class="col-md-3">
+ 
+        <div class="home-page-search-container border-radius-all">
+            <div id="autocompleteSearchBar">
+                <div class="search-container-input home">
+                    <p style="font-size:40px;">Filter Search</p>
+                    <span class="fa fa-search searchInputIcon" style="position:relative; top:-130px;">
+                    <input id="searchAutocomplete" name="search" placeholder="Enter House Style">
+                    <input id="searchAutocomplete" name="search" placeholder="Enter Year Built">
+                    <input id="searchAutocomplete" name="search" placeholder="Enter Neighborhood">
+                    <input id="searchAutocomplete" name="search" placeholder="Enter Number of Bath">
+                    <input id="searchAutocomplete" name="search" placeholder="Enter Number of Garage">
+                    <input id="searchAutocomplete" name="search" placeholder="Enter Garage Area">
+                    </span>
+                </div>
+                <button id="filter-btn" type="submit" class="btn btn-default" style="position:relative; top:-100px; background-color: white;">Filter Table</button>
+            </div>
+        </div>
+        </div>
+    <div class="container-fliud">
+        <div class="row">
+            </div>
+    </div>
+        </div>
+    </div>
+  
+</body>
+</html>
