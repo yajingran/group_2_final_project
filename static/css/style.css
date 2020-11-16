@@ -1,0 +1,36 @@
+body {
+ 
+    color: #f7f7f7;
+  }
+ 
+  .jumbotron {
+      padding-top: 200px;
+      padding-bottom: 300px;
+    background-image: url("../images/Ames1.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+    
+  }
+
+  .jumbotron h1 {
+    position: relative;
+    display: block;
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+    top:-150px;
+  }
+  
+  .jumbotron p {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    color: white;
+    top:-140px;
+  }
+
+  .span {
+    position: relative;
+    top: -100px;
+  }
+
