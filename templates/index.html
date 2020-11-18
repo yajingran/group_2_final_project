@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="https://yajingran.github.io/group_2_final_project/dashboards/dashboard1.html">
                             Dashboards
                         </a>                       
                     </li>
@@ -50,33 +50,48 @@
     <div class="jumbotron jumbotron-fluid">
         <h1 class="display-4"><b>Ames's Home of Property</b></h1>
         <p class="lead"  style="text-align:center"><b>Predict sales prices and practice feature engineering, RFs, and gradient boosting</b></p>
- 
+    </div>
         <div class="row">
         <div class="col-md-3">
  
-        <div class="home-page-search-container border-radius-all">
-            <div id="autocompleteSearchBar">
-                <div class="search-container-input home">
-                    <p style="font-size:40px;">Filter Search</p>
-                    <span class="fa fa-search searchInputIcon" style="position:relative; top:-130px;">
-                    <input id="searchAutocomplete" name="search" placeholder="Enter House Style">
-                    <input id="searchAutocomplete" name="search" placeholder="Enter Year Built">
-                    <input id="searchAutocomplete" name="search" placeholder="Enter Neighborhood">
-                    <input id="searchAutocomplete" name="search" placeholder="Enter Number of Bath">
-                    <input id="searchAutocomplete" name="search" placeholder="Enter Number of Garage">
-                    <input id="searchAutocomplete" name="search" placeholder="Enter Garage Area">
-                    </span>
+            <div class="container">
+                <div class="header">
+                  <h2>Features Input</h2>
                 </div>
-                <button id="filter-btn" type="submit" class="btn btn-default" style="position:relative; top:-100px; background-color: white;">Filter Table</button>
-            </div>
-        </div>
+               
+                <form class="form" id="form">
+                  <div class="form-control">
+                    <label>Lot Type</label>
+                    <input type="text" placeholder="Enter Lot" id="lot">
+                  </div>
+                  
+                   <div class="form-control">
+                    <label>Overall Quality</label>
+                    <input type="text" placeholder="Enter Quality" id="quality">
+                  </div>
+                  
+                    <div class="form-control">
+                    <label>Total Area</label>
+                    <input type="text" placeholder="Enter Area" id="quality">
+                  </div>
+                  
+                  <div class="form-control">
+                    <label>Lot</label>
+                    <input type="text" placeholder="Enter Lot" id="lot">
+                  </div>                              
+    
+              <button>Submit</button>
+              
+              </form>
+              </div>
         </div>
     <div class="container-fliud">
         <div class="row">
-            </div>
-    </div>
-        </div>
-    </div>
-  
+         </div>
+     </div>
+    
+       </div>
+    
+    <script src="static/js/script.js"></script>
 </body>
 </html>
