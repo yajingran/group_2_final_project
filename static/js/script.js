@@ -1,14 +1,14 @@
 
 
 const form = document.getElementById('form');
-const lot = document.getElementById('lot');
+const lot = document.getElementById('area');
 const quality = document.getElementById('quality');
-const area = document.getElementById('area');
-const neighborhood = document.getElementById('neighborhood');
+const area = document.getElementById('grlivarea');
+const neighborhood = document.getElementById('garagecars');
+const username = document.getElementById('garagearea');
 const username = document.getElementById('fullbath');
 const username = document.getElementById('year');
-const username = document.getElementById('foundation');
-const username = document.getElementById('garagecars');
+const username = document.getElementById('year2');
 const username = document.getElementById('');
 const username = document.getElementById('');
 
