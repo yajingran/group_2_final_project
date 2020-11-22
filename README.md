@@ -162,7 +162,7 @@ The advantages and limitation of Multiple Linear Regression is listed as below:
 <br /> * predictor values provide insights for limited features
 <br /> * If we want to create any linear model, it is essential that the features are normally distributed. This is one of the assumptions of multiple linear regression.
 
-* if we had more time, we would like to take out all the outliers in all the features and check if it will give us a better result
+* if we had more time, we would like to take out all the outliers in all the features and check if it will give us a better result. we would also try using random forest to select features based on the importance.
 * the statistics we included are coefficient, intercept, mean squared error(MSE) and coefficient of determination/R square. Coefficient and intercept are calculated in order to get our Multiple Linear Regression formula. 
 * The mean squared error indicates how close a regression line is to a set of points. It does this by taking the distances from the points to the regression line (these distances are the “errors”) and squaring them. The squaring is necessary to remove any negative signs. It also gives more weight to larger differences. It’s called the mean squared error as you’re finding the average of a set of errors. The smaller the means squared error, the closer we are to finding the line of best fit. 
 * R-squared is a statistical measure of how close the data are to the fitted regression line. 
