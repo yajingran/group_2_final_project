@@ -2,10 +2,14 @@
 ## Project Overview
 We used House Price dataset from kaggle dataset(https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data). Our goal is to use multiple linear regression model to predict the house price based on selected features and use Javascript to write a website to publish our model. On the weibite, customers will be able to enter different features of their house as input and out will return an estimated house price.
 
+##  Description of the communication
+* we have weekly meeting on zoom
+* we have regular communicate on slack 
+
 ## Dataset Content
 The original dataset contains the following files:
 * ames_raw.csv - 2930 rows and 83 columns
-* ames_geo.csv - 
+* ames_geo.csv - 2932 rows and 4 columns (this is only used for tableau component)
 * data_description.txt - full description of each column
 
 ### Data fields
@@ -146,7 +150,7 @@ SaleCondition: Condition of sale
 
 
 ### Discussion
-* We reduced the number of features to 9 from 81 so our model will not get confused. We first created a heatmap and selected top 11 features that are most related to Sales Price.  We then check the selected features using histogram to see if they are normally distributed in order to be used in linear regression model. After the features are finalized, we assign them as X, whereas SalesPrice(target) is assigned to y. 
+* We first created a heatmap and selected top 11 features that are most related to sale price with the addition of another 4 categorical features we think might be relevant. We then checked the selected features using histogram to see if they are normally distributed in order to be used in linear regression model. After we built the machine learning model, we did trial and errors by running the model using different number of features and compared the R^2. We decided to include only 8 features taken into consideration of the r^2 and how it will be laid out on our tableau dashboard.
 * Since we have many features, we chose to use multiple linear regression model to predict the price. Multiple linear regression estimates the relationship between several independent variables (features) and one dependent variable. We also compared its performance with Deep Learning Model. Althouth we got better results with Deep Learning Model(R^2: 0.80 VS 0.84), model took a lot longer to run than the Multiple Linear Regression(0.0023s VS 16.68s). Since the result is not significantly different, considering the run time, we decided to use Multiple Linear Regression for our machine learning model.
 The advantages and limitation of Multiple Linear Regression is listed as below:
 <br /> Advantages
@@ -159,6 +163,10 @@ The advantages and limitation of Multiple Linear Regression is listed as below:
 <br /> * If we want to create any linear model, it is essential that the features are normally distributed. This is one of the assumptions of multiple linear regression.
 
 * if we had more time, we would like to take out all the outliers in all the features and check if it will give us a better result
-* the statistics we included are coefficient, intercept, mean squared error(MSE) and coefficient of determination/R square
+* the statistics we included are coefficient, intercept, mean squared error(MSE) and coefficient of determination/R square. Coefficient and intercept are calculated in order to get our Multiple Linear Regression formula. 
+* The mean squared error indicates how close a regression line is to a set of points. It does this by taking the distances from the points to the regression line (these distances are the “errors”) and squaring them. The squaring is necessary to remove any negative signs. It also gives more weight to larger differences. It’s called the mean squared error as you’re finding the average of a set of errors. The smaller the means squared error, the closer we are to finding the line of best fit. 
+* R-squared is a statistical measure of how close the data are to the fitted regression line. 
+<br /> R-squared = Explained variation / Total variation. It is always between 0 and 100%; 0% indicates that the model explains none of the variability of the response data around its mean, 100% indicates that the model explains all the variability of the response data around its mean. In our model, we got 86% by using 8 features in our model("neighborhood","total_area","overallqual", "garagecars","fullbath","yearbuilt","yearremodadd","yrsold") which indicate if the user input information for the selected 8 features, we should have 86% of predicting the accurate house price. We got 90% by using 64 features which means if the user input all 64 features, we will get the accurate housr price 9 out of 10 times.
+
 
 
