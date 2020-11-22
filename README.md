@@ -4,7 +4,8 @@ We used House Price dataset from kaggle dataset(https://www.kaggle.com/c/house-p
 
 ## Dataset Content
 The original dataset contains the following files:
-* ames_raw.csv - 2930 rows and 80 columns
+* ames_raw.csv - 2930 rows and 83 columns
+* ames_geo.csv - 
 * data_description.txt - full description of each column
 
 ### Data fields
