@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>House Prices Prediction</title>
+            <link
+             rel="stylesheet"
+             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+             crossorigin="anonymous"
+           />
+           <link rel="stylesheet" href="static/css/style.css">
+           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        </head>
+ 
+<!--Navigation bar-->
+<body class="siteScrolled" data-new-gr-c-s-check-loaded="14.983.0">
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light" id="navMain">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" drop-menu-right>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-blue" href="index.html">
+                            Home 
+                            <span class="sr-only"(current)></span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://yajingran.github.io/group_2_final_project/dashboards/dashboard1.html">
+                            Dashboards
+                        </a>                       
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            Machine Learning
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://github.com/yajingran/group_2_final_project">
+                        Github Repository</a>
+                    </li>
+                </ul>
+            <div class="navbar-brand" href="index.html">House Prices Prediction</a>
+            </div>
+        </nav>
+    </div>
+    <!--Jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4"><b>Ames's Home of Property</b></h1>
+        <p class="lead"  style="text-align:center"><b>Predict sales prices and practice feature engineering, RFs, and gradient boosting</b></p>
+    </div>
+        <div class="row">
+        <div class="col-md-3">
+ 
+            <div class="container">
+                <div class="header">
+                  <h2>Features Input</h2>
+                </div>
+               
+                <form class="form" id="form">
+                  <div class="form-control">
+                    <label>Total Area (ft²)</label>
+                    <input type="number" placeholder="Enter Area" id="area">
+                  </div>
+                  
+                   <div class="form-control">
+                    <label>Overall Quality</label>
+                    <select id="quality">
+                      <option value="Good">Good</option>
+                      <option value="Median">Median</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                  </div>
+                  
+                    <div class="form-control">
+                    <label>Ground Living Area</label>
+                    <input type="text" placeholder="Enter Area" id="grlivarea">
+                  </div>
+                  
+                  <div class="form-control">
+                    <label>Garage Cars</label>
+                    <input type="number" placeholder="Enter Number" id="garagecars">
+                  </div>                              
+    
+                  <div class="form-control">
+                    <label>Garage Area</label>
+                    <input type="number" placeholder="Enter Area" id="garagearea">
+                  </div>                              
+    
+                  <div class="form-control">
+                    <label>Full Bath</label>
+                    <input type="number" placeholder="Enter Number" id="fullbath">
+                  </div>                 
+                  
+                  <div class="form-control">
+                    <label>Year Built</label>
+                    <input type="number" placeholder="Enter Year" id="year">
+                  </div>                              
+
+                  <div class="form-control">
+                    <label>Year Remodeled</label>
+                    <input type="number" placeholder="Enter Year" id="year2">
+                  </div>                              
+    
+    
+    
+              <button>Submit</button>
+              
+              </form>
+              </div>
+        </div>
+    <div class="container-fliud">
+        <div class="row">
+         </div>
+     </div>
+    
+       </div>
+    
+    <script src="static/js/script.js"></script>
+</body>
+</html>
