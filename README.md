@@ -155,7 +155,8 @@ The advantages and limitation of Multiple Linear Regression is listed as below:
 <br /> Limitations
 <br /> * the size of the sample may lead to the pitfall of incomplete data
 <br /> * predictor values provide insights for limited features
-<br /> * features have to be normally distributed in order to get the best result
+<br /> * If we want to create any linear model, it is essential that the features are normally distributed. This is one of the assumptions of multiple linear regression.
+
 * if we had more time, we would like to take out all the outliers in all the features and check if it will give us a better result
 * the statistics we included are coefficient, intercept, mean squared error(MSE) and coefficient of determination/R square
 
