@@ -4,10 +4,8 @@ We used House Price dataset from kaggle dataset(https://www.kaggle.com/c/house-p
 
 ## Dataset Content
 The original dataset contains the following files:
-* train.csv - the training set. contains 81 columns
-* test.csv - the test set. contains 80 columns
+* ames_raw.csv - 2930 rows and 80 columns
 * data_description.txt - full description of each column
-* sample_submission.csv - a benchmark submission from a linear regression on year and month of sale, lot square footage, and number of bedrooms
 
 ### Data fields
 Description of the columns is as below:
@@ -93,7 +91,7 @@ YrSold: Year Sold
 SaleType: Type of sale
 SaleCondition: Condition of sale
 
-
+## SQL Database
 ### Export Transform and Load
 1) EXTRACT
 - Extracted from csv files
@@ -112,26 +110,53 @@ SaleCondition: Condition of sale
 - Normalized data in SQL
 - Joined tables and exported to .CSV for Machine Learning*
 
-
-### Data Exploration 
-* Check the dataset and better understand it
-* check the missing values and duplicates
-* check the columns
-* check the types of each columns
-* check the shape
+## Machine Learning 
+### Step 1: Data Exploration 
+* Check the dataset - 2930 rows and 81 columns
+* Check the missing values and duplicates
+### Step 2: Features Exploration
+* Use heatmap to identify features that are most correlated to the Sales Price
+* List out the top 11 most correlated features to the target - saleprice
+* select 11 numerical features plus 4 additional categorical features that we think will affect the house price
+### Step 3: Data Cleansing
+* Remove null value or replace it with the mode of their respective columns
+* Create new feature to combine features that are in the same category(total_area)
+* Drop any additional NA
+* Export the cleaned data to csv file
 
 ### Machine Learning Model
-Since we have many features, we chose to use multiple linear regression model to predict the price. Multiple linear regression estimates the relationship between several independent variables (features) and one dependent variable.
+
+#### Step 1: Import necessary dependencies
+#### Step 2: Connect to the database
+#### Step 3: Data manipulation
+* Take a log of both the features and target to make them more normally distributed
+* Convert numerical categories that shouldn't be numerical to categorical categories
+* Use label encoder to transform categorical features to numerical 
+#### Step 4: Set X and y
+* X = features where y = target
+#### Step 5: Scale both X and y
+#### Step 6: Split the data into training set and testing set
+* we did a 80/20 split
+* check the shape of each set
+#### Step 7: Define the model
+#### Step 8: Fit the model and time the model
+#### Step 9: Run prediction on testing set
+#### Step 10: print the coefficient, intercept, MSE and model score(R^2),and model run time
+
+
+### Discussion
+* We reduced the number of features to 9 from 81 so our model will not get confused. We first created a heatmap and selected top 11 features that are most related to Sales Price.  We then check the selected features using histogram to see if they are normally distributed in order to be used in linear regression model. After the features are finalized, we assign them as X, whereas SalesPrice(target) is assigned to y. 
+* Since we have many features, we chose to use multiple linear regression model to predict the price. Multiple linear regression estimates the relationship between several independent variables (features) and one dependent variable. We also compared its performance with Deep Learning Model. Althouth we got better results with Deep Learning Model(R^2: 0.80 VS 0.84), model took a lot longer to run than the Multiple Linear Regression(0.0023s VS 16.68s). Since the result is not significantly different, considering the run time, we decided to use Multiple Linear Regression for our machine learning model.
 The advantages and limitation of Multiple Linear Regression is listed as below:
 <br /> Advantages
-<br /> > allows us to determine the relative influence of more than one predictor variables to the target variable.
-<br /> > enables us to identify outliers (find out the features that have a strong correlations and the ones that do not)
+<br /> * allows us to determine the relative influence of more than one predictor variables to the target variable.
+<br /> * enables us to identify outliers (find out the features that have a strong correlations and the ones that do not)
+<br /> * it is fast to run the model
 <br /> Limitations
-<br /> > the size of the sample may lead to the pitfall of incomplete data
-<br /> > predictor values provide insights for limited features
-
-### Feature Selection 
-We reduced the number of features to 7 from 80 so our model will not get confused. We first created a heatmap and selected top 7 features that are most related to Sales Price.  We then check the selected features using histogram to see if they are normally distributed in order to be used in linear regression model. After the features are finalized, we assign them as X, whereas SalesPrice(target) is assigned to y. 
-
+<br /> * the size of the sample may lead to the pitfall of incomplete data
+<br /> * predictor values provide insights for limited features
+<br /> * features have to be normally distributed in order to get the best result
+* if we had more time, we would like to take out all the outliers in all the features and check if it will give us a better result
+* the statistics we included are coefficient, intercept, mean squared error(MSE) and coefficient of determination/R square
 
 
