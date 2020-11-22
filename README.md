@@ -124,24 +124,24 @@ SaleCondition: Condition of sale
 * Drop any additional NA
 * Export the cleaned data to csv file
 
-### Machine Learning Model
+### Step 4: Machine Learning Model
 
-#### Step 1: Import necessary dependencies
-#### Step 2: Connect to the database
-#### Step 3: Data manipulation
+#### 1: Import necessary dependencies
+#### 2: Connect to the database
+#### 3: Data manipulation
 * Take a log of both the features and target to make them more normally distributed
 * Convert numerical categories that shouldn't be numerical to categorical categories
 * Use label encoder to transform categorical features to numerical 
-#### Step 4: Set X and y
+#### 4: Set X and y
 * X = features where y = target
-#### Step 5: Scale both X and y
-#### Step 6: Split the data into training set and testing set
+#### 5: Scale both X and y
+#### 6: Split the data into training set and testing set
 * we did a 80/20 split
 * check the shape of each set
-#### Step 7: Define the model
-#### Step 8: Fit the model and time the model
-#### Step 9: Run prediction on testing set
-#### Step 10: print the coefficient, intercept, MSE and model score(R^2),and model run time
+#### 7: Define the model
+#### 8: Fit the model and time the model
+#### 9: Run prediction on testing set
+#### 10: print the coefficient, intercept, MSE and model score(R^2),and model run time
 
 
 ### Discussion
