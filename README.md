@@ -169,4 +169,9 @@ The advantages and limitation of Multiple Linear Regression is listed as below:
 <br /> R-squared = Explained variation / Total variation. It is always between 0 and 100%; 0% indicates that the model explains none of the variability of the response data around its mean, 100% indicates that the model explains all the variability of the response data around its mean. In our model, we got 86% by using 8 features in our model("neighborhood","total_area","overallqual", "garagecars","fullbath","yearbuilt","yearremodadd","yrsold") which indicate if the user input information for the selected 8 features, we should have 86% of predicting the accurate house price. We got 90% by using 64 features which means if the user input all 64 features, we will get the accurate housr price 9 out of 10 times.
 
 
-
+## Dashboard
+* We will be using Tableau to create final dashboards
+* The interactive elements we use include: 
+<br />1. Navigation bar: includes tabs to Dashboards, Machine Learning and Github Repository pages
+<br />2. Features input: where users can select from eight feature dropdowns to predict house prices
+<br />3. Tableau dashboards: we will embed a number of Tableau dashboards in the Dashboards page
