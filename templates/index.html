@@ -13,7 +13,7 @@
            <link rel="stylesheet" href="static/css/style.css">
            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-           <script src="static/js/script.js"></script>
+  
         </head>
  
 <!--Navigation bar-->
@@ -51,6 +51,19 @@
         <h1 class="display-4"><b>Ames's Home of Property</b></h1>
         <p class="lead"  style="text-align:center"><b>Predict sales prices and practice feature engineering, RFs, and gradient boosting</b></p>
     </div>
+
+
+<div class=paragraph class="row" class="col-md-6">
+  <p style="color:black">
+    Type in the features and get the predicted price of your dream house.
+  </p>
+</div>
+
+<div class=paragraph id="result" class="col-md-6">
+  <p style="color:black"> Price of the house is {{ pred }} USD </p>
+</div>
+
+
         <div class="row">
         <div class="col-md-4">
  
@@ -60,6 +73,8 @@
                 </div>
                
                 <div class="form-control">
+                  <form action="/predict" method="POST">
+
                   <label class='select_label'>Neighborhood</label>
                   <select id="neighborhood" name='neighborhood'>
                     <option value="0">Bloomington Heights</option>
@@ -99,7 +114,7 @@
                   <div class="form-control">
                     <label class='select_label'>Overall Quality (higher score=better quality)</label>
                     <select id="overallqual" name='overallqual'>
-                      <option value="1">1</option>
+                      <option value="0">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
@@ -108,7 +123,7 @@
                       <option value="7">7</option>
                       <option value="8">8</option>
                       <option value="9">9</option>
-                      <option value="10">10</option>
+                      <option value="1">10</option>
                     </select><br>
                   </div>
  
@@ -147,20 +162,21 @@
                   </div>
 
                   <div class=form-control>
-                    <label>Year Sold</label><br>
-                    <input type="number" placeholder="Enter Year" id="yrsold" name='yrsold'><br>
+                    <label class='select_label'>Year Sold</label><br>
+                    <select id="fullbath" name='fullbath'>
+                      <option value="0">2006</option>
+                      <option value="1">2007</option>
+                      <option value="2">2008</option>
+                      <option value="3">2009</option>
+                      <option value="4">2010</option>
+                      </select>
                   </div>
     
-              <button id="predict btn" class="mt-20 btn action-1">Predict Price</button>
+              <button id="predict btn" class="mt-20 btn action-1" style="background-color:powderblue"><b> Predict Price</b></button>
               
               </form>
               </div>
-              <div class="col-md-1"></div>
-              <div class="col-xl-5 col-md-6" data-aos-data-aos-delay="900">
-                <div id="result" class="mt-125 pt-60 pb-right_side">
-                  Price of the house is USD
-                </div>
-              </div>
+             
         </div>
     <div class="container-fliud">
         <div class="row">
