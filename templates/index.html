@@ -13,6 +13,7 @@
            <link rel="stylesheet" href="static/css/style.css">
            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
         </head>
  
 <!--Navigation bar-->
@@ -22,9 +23,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" drop-menu-right>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-blue" href="index.html">
+                        <a class="nav-link text-blue" href="https://yajingran.github.io/group_2_final_project">
                             Home 
-                            <span class="sr-only"(current)></span>
                         </a>
                     </li>
                     <li class="nav-item active">
@@ -33,7 +33,7 @@
                         </a>                       
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="https://yajingran.github.io/group_2_final_project/dashboards/ml.html">
                             Machine Learning
                         </a>
                     </li>
@@ -51,65 +51,132 @@
         <h1 class="display-4"><b>Ames's Home of Property</b></h1>
         <p class="lead"  style="text-align:center"><b>Predict sales prices and practice feature engineering, RFs, and gradient boosting</b></p>
     </div>
+
+
+<div class=paragraph class="row" class="col-md-6">
+  <p style="color:black">
+    Type in the features and get the predicted price of your dream house.
+  </p>
+</div>
+
+<div class=paragraph id="result" class="col-md-6">
+  <p style="color:black"> Price of the house is {{ pred }} USD </p>
+</div>
+
+
         <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
  
             <div class="container">
                 <div class="header">
                   <h2>Features Input</h2>
                 </div>
                
-                <form class="form" id="form">
+                <div class="form-control">
+                  <form action="/predict" method="POST">
+
+                  <label class='select_label'>Neighborhood</label>
+                  <select id="neighborhood" name='neighborhood'>
+                    <option value="0">Bloomington Heights</option>
+                    <option value="1">Bluestem</option>
+                    <option value="2">Briardale</option>
+                    <option value="3">Brookside</option>
+                    <option value="4">Clear Creek</option>
+                    <option value="5">College Creek</option>
+                    <option value="6">Crawford</option>
+                    <option value="7">Edwards</option>
+                    <option value="8">Gilbert</option>
+                    <option value="9">Greens</option>
+                    <option value="11">lowa DOT and Rail Road</option>
+                    <option value="13">Meadow Village</option>
+                    <option value="14">Mitchell</option>
+                    <option value="15">North Ames</option>
+                    <option value="18">Northridge</option>
+                    <option value="16">Northpark Villa</option>
+                    <option value="19">Northridge Heights</option>
+                    <option value="17">Northwest Ames</option>
+                    <option value="20">Old Town</option>
+                    <option value="21">South & West of lowa State University</option>
+                    <option value="22">Sawyer</option>
+                    <option value="23">Sawyer West</option>
+                    <option value="24">Somerset</option>
+                    <option value="25">Stone Brook</option>
+                    <option value="26">Timberland</option>
+                    <option value="27">Veenker</option>
+                  </select><br>
+                </div>
+
                   <div class="form-control">
-                    <label>Total Area (ft²)</label>
-                    <input type="number" placeholder="Enter Area" id="area">
+                    <label>Total Area (ft²)</label><br>
+                    <input type="number" placeholder="Enter Area" id="total_area" name='total_area'><br>
                   </div>
                   
-                   <div class="form-control">
-                    <label>Overall Quality</label>
-                    <select id="quality">
-                      <option value="Good">Good</option>
-                      <option value="Median">Median</option>
-                      <option value="Poor">Poor</option>
+                  <div class="form-control">
+                    <label class='select_label'>Overall Quality (higher score=better quality)</label>
+                    <select id="overallqual" name='overallqual'>
+                      <option value="0">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="1">10</option>
+                    </select><br>
+                  </div>
+ 
+                  <div class="form-control">
+                    <label class='select_label'>Garage Cars</label><br>
+                    <select id="garagecars" name='garagecars'>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select><br>
+                  </div>                       
+    
+
+                  <div class=form-control>
+                    <label class='select_label'>Full Bath</label><br>
+                    <select id="fullbath" name='fullbath'>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
                     </select>
                   </div>
                   
-                    <div class="form-control">
-                    <label>Ground Living Area</label>
-                    <input type="text" placeholder="Enter Area" id="grlivarea">
+                  <div class=form-control>
+                    <label>Year Built</label><br>
+                    <input type="number" placeholder="Enter Year" id="yearbuilt" name='yearbuilt'><br>
                   </div>
-                  
-                  <div class="form-control">
-                    <label>Garage Cars</label>
-                    <input type="number" placeholder="Enter Number" id="garagecars">
-                  </div>                              
-    
-                  <div class="form-control">
-                    <label>Garage Area</label>
-                    <input type="number" placeholder="Enter Area" id="garagearea">
-                  </div>                              
-    
-                  <div class="form-control">
-                    <label>Full Bath</label>
-                    <input type="number" placeholder="Enter Number" id="fullbath">
-                  </div>                 
-                  
-                  <div class="form-control">
-                    <label>Year Built</label>
-                    <input type="number" placeholder="Enter Year" id="year">
-                  </div>                              
 
-                  <div class="form-control">
-                    <label>Year Remodeled</label>
-                    <input type="number" placeholder="Enter Year" id="year2">
-                  </div>                              
+                  <div class=form-control>
+                    <label>Year Remodeled</label><br>
+                    <input type="number" placeholder="Enter Year" id="yearremodadd" name='yearremodadd'><br>
+                  </div>
+
+                  <div class=form-control>
+                    <label class='select_label'>Year Sold</label><br>
+                    <select id="fullbath" name='fullbath'>
+                      <option value="0">2006</option>
+                      <option value="1">2007</option>
+                      <option value="2">2008</option>
+                      <option value="3">2009</option>
+                      <option value="4">2010</option>
+                      </select>
+                  </div>
     
-    
-    
-              <button>Submit</button>
+              <button id="predict btn" class="mt-20 btn action-1" style="background-color:powderblue"><b> Predict Price</b></button>
               
               </form>
               </div>
+             
         </div>
     <div class="container-fliud">
         <div class="row">
@@ -117,7 +184,10 @@
      </div>
     
        </div>
-    
-    <script src="static/js/script.js"></script>
+
+
+   
+    </div>
 </body>
 </html>
+    
