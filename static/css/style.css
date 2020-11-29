@@ -51,14 +51,11 @@ body {
    color: black;
  }
 
- .form {
-   padding: 70px 70px;
-   margin-bottom: 200px;
- }
 
- .form-control {
+
+ .form {
    margin-bottom: 10px;
-   padding-bottom: 20px;
+   padding-bottom: 10px;
    position: relative;
  }
 
