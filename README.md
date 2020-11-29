@@ -5,6 +5,8 @@ We used House Price dataset from kaggle dataset(https://www.kaggle.com/c/house-p
 ##  Description of the communication
 * we have weekly meeting on zoom
 * we have regular communicate on slack 
+## Link to the Google Slide
+https://docs.google.com/presentation/d/1rfWITkZjMb6rclgVjF-IFZPDe-3ajrZsUKvwRUZ89hA/edit?ts=5faf2e83#slide=id.g4dfce81f19_0_45
 
 ## Dataset Content
 The original dataset contains the following files:
@@ -147,11 +149,13 @@ SaleCondition: Condition of sale
 #### 8: Fit the model and time the model
 #### 9: Run prediction on testing set
 #### 10: print the coefficient, intercept, MSE and model score(R^2),and model run time
+#### 11: Plot the comparison of Multiple Linear Regression Model and Deep Leaning Model
 
+Noted: a more detailed explaination with screenshot of codes are presented on our website
 
 ### Discussion
 * We first created a heatmap and selected top 11 features that are most related to sale price with the addition of another 4 categorical features we think might be relevant. We then checked the selected features using histogram to see if they are normally distributed in order to be used in linear regression model. After we built the machine learning model, we did trial and errors by running the model using different number of features and compared the R^2. We decided to include only 8 features taken into consideration of the r^2 and how it will be laid out on our tableau dashboard.
-* Since we have many features, we chose to use multiple linear regression model to predict the price. Multiple linear regression estimates the relationship between several independent variables (features) and one dependent variable. We also compared its performance with Deep Learning Model. We got better results with Deep Learning Model(R^2: 0.86 VS 0.89) but model took a lot longer to run than the Multiple Linear Regression(0.002s VS 12.38s). Since the result is not significantly different, we decided to use Multiple Linear Regression for our machine learning model due to the shorter runtime and more consistent result. (Please refer to the graph under MODEL COMPARISON - Comparing Multiple Linear Regression VS Deep Learning in terms of R^2)
+* Since we have many features, we chose to use multiple linear regression model to predict the price. Multiple linear regression estimates the relationship between several independent variables (features) and one dependent variable. We also compared its performance with Deep Learning Model as DLM is an alternative to solving regression problem. MLR gave us a better result(R^2: 0.86 VS 0.83), faster runtime(0.002s VS 12.38s), and more consistent result with different number of features. (Please refer to the graph under MODEL COMPARISON - Comparing Multiple Linear Regression VS Deep Learning in terms of R^2)
 The advantages and limitation of Multiple Linear Regression is listed as below:
 <br /> Advantages
 <br /> * allows us to determine the relative influence of more than one predictor variables to the target variable.
