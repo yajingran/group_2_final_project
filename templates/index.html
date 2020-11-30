@@ -60,7 +60,7 @@
 </div>
  
 <div class=paragraph id="result" class="col-md-6">
-  <p style="color:black"> Price of the house is {{ pred }} USD </p>
+  <p style="color:black"> {{ pred }} </p>
 </div>
  
  
@@ -74,8 +74,8 @@
                
                 
                 <div class=form>
-                  <div class="form-control">
                   <form action="/predict" method="POST">
+                  <div class="form-control">
  
                   <label class='select_label'>Neighborhood</label>
                   <select id="neighborhood" name='neighborhood'>
@@ -89,7 +89,9 @@
                     <option value="7">Edwards</option>
                     <option value="8">Gilbert</option>
                     <option value="9">Greens</option>
+                    <option value="10">Green Hill</option>
                     <option value="11">lowa DOT and Rail Road</option>
+                    <option value="12">Landmark</option>
                     <option value="13">Meadow Village</option>
                     <option value="14">Mitchell</option>
                     <option value="15">North Ames</option>

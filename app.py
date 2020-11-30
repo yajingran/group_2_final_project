@@ -4,7 +4,7 @@ from joblib import dump, load
 import numpy as np
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.linear_model import LinearRegression
-clf = load('mlr_model.joblib')
+mlr_model = load('mlr_model.joblib')
  
 # from flask import Flask
 app = Flask(__name__)
@@ -24,7 +24,7 @@ def predict():
     prediction=mlr_model.predict(final)
     output = round(prediction[0],2)
  
-    return render_template('index.html', pred=123)
+    return render_template('index.html', pred='The price of your dream house is {} USD.'.format(output))
 
 if __name__ == "__main__":
    app.run()
