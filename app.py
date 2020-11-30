@@ -2,6 +2,7 @@ from flask import request, Flask, render_template
 from flask_pymongo import PyMongo
 from joblib import dump, load
 import numpy as np
+from sklearn import preprocessing
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.linear_model import LinearRegression
 mlr_model = load('mlr_model.joblib')

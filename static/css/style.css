@@ -1,9 +1,9 @@
 body {
-  min-height: 100vh;
-
+  min-height: 130vh;
+ 
   background-color: lightsteelblue;
 }
-
+ 
 .jumbotron {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -12,7 +12,7 @@ body {
   height: 80%;
   text-align: center;
 }
-
+ 
 .jumbotron h1 {
   position: relative;
   display: block;
@@ -21,7 +21,7 @@ body {
   color: white;
   top:-70px;
 }
-
+ 
 .jumbotron p {
   position: relative;
   display: block;
@@ -29,7 +29,7 @@ body {
   color: white;
   top:-50px;
 }
-
+ 
 .container {
  background-color: whitesmoke;
  border-radius: 5px;
@@ -37,44 +37,44 @@ body {
  overflow: hidden;
  width:400px;
  max-width: 100%;
- height: 850px;
+ height: 950px;
 }
-
+ 
 .header {
 background-color: white;
  border-bottom: 1px solid #f0f0f0;
  padding: 20px 40px;
 }
-
+ 
 .header h2 {
  margin: 0;
  color: black;
  background-color: whitesmoke
 }
-
-
-
+ 
+ 
+ 
 .form {
  margin-bottom: 5px;
  padding-bottom: 10px;
  position: relative;
  background-color: white;
  box-shadow: 0 0 10px;
-
+ 
  border-radius: 5px
 }
-
-
+ 
+ 
 .form-control {
 background-color: white
 }
-
-
+ 
+ 
 .form-control label {
 display: inline-block;
 margin-bottom: 5px;
 }
-
+ 
 .form-control input {
 border: 2px solid #f0f0f0;
 border-radius: 4px;
@@ -85,10 +85,9 @@ padding: 10px;
 width: 100%;
 background-color: white
 }
-
+ 
 .form button {
 background-color: #8e44ad;
-border: 2px solid black;
 border-radius: 4px;
 color: #fff;
 display: block;
@@ -97,13 +96,29 @@ font-size: 16px;
 padding: 30px;
 width: 100%
 }
-
+ 
 .paragraph {
 position:relative;
 left: 600px;
 top: 200px;
 font-size: 20px;
 }
+
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0,136,169,1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0,136,169,0.8);
+ 
+}
+
 
 
 
