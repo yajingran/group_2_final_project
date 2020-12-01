@@ -4,13 +4,8 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>House Prices Prediction</title>
-            <link
-             rel="stylesheet"
-             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-             integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-             crossorigin="anonymous"
-           />
-           <link rel="stylesheet" href="static/css/style.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+           <link rel="stylesheet" href="../static/css/style.css">
            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
@@ -21,28 +16,29 @@
     <div class="wrapper">
         <nav class="navbar navbar-expand-lg navbar-light" id="navMain">
             <div class="collapse navbar-collapse" id="navbarSupportedContent" drop-menu-right>
+                <a class="navbar-brand" href="#">House Prices Prediction</a>
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link text-blue" href="https://yajingran.github.io/group_2_final_project">
+                        <a class="nav-link text-blue" href="http://127.0.0.1:5000">
                             Home 
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="https://yajingran.github.io/group_2_final_project/dashboards/dashboard1.html">
                             Dashboards
                         </a>                       
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="https://yajingran.github.io/group_2_final_project/dashboards/ml.html">
                             Machine Learning
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="https://github.com/yajingran/group_2_final_project">
                         Github Repository</a>
                     </li>
                 </ul>
-            <div class="navbar-brand" href="index.html">House Prices Prediction</a>
+
             </div>
         </nav>
     </div>
@@ -53,19 +49,11 @@
     </div>
  
  
-<div class=paragraph class="row" class="col-md-6">
-  <p style="color:black">
-    Type in the features and get the predicted price of your dream house.
-  </p>
-</div>
- 
-<div class=paragraph id="result" class="col-md-6">
-  <p style="color:black"> {{ pred }} </p>
-</div>
+
  
  
-        <div class="row">
-        <div class="col-md-4">
+        <div class="row align-items-center text-center m-0">
+        <div class="col-md-6">
  
             <div class="container">
                 <div class="header">
@@ -74,7 +62,7 @@
                
                 
                 <div class=form>
-                  <form action="/predict" method="POST">
+                  <form action="/predict" method="POST" id="form">
                   <div class="form-control">
  
                   <label class='select_label'>Neighborhood</label>
@@ -112,7 +100,7 @@
  
                   <div class="form-control">
                     <label>Total Area (ft²)</label><br>
-                    <input type="number" placeholder="Enter Area" id="total_area" name='total_area' required><br>
+                    <input type="number" placeholder="Enter Area" id="total_area" name='total_area' required min="0"><br>
                   </div>
                   
                   <div class="form-control">
@@ -157,20 +145,20 @@
                   
                   <div class=form-control>
                     <label>Year Built</label><br>
-                    <input type="number" placeholder="Enter Year" id="yearbuilt" name='yearbuilt' required><br>
+                    <input type="number" placeholder="Enter Year" id="yearbuilt" name='yearbuilt' required min="0"><br>
                   </div>
  
                   <div class=form-control>
                     <label>Year Remodeled</label><br>
-                    <input type="number" placeholder="Enter Year" id="yearremodadd" name='yearremodadd' required><br>
+                    <input type="number" placeholder="Enter Year" id="yearremodadd" name='yearremodadd' required min="0"><br>
                   </div>
  
                   <div class=form-control>
                     <label>Year Sold</label><br>
-                    <input type="number" placeholder="Enter Year" id="yearsold" name="yearsold" required><br>
+                    <input type="number" placeholder="Enter Year" id="yearsold" name="yearsold" required min="0"><br>
                   </div>
     
-              <button id="predict btn" class="mt-20 btn action-1" style="background-color:powderblue"><b> Predict Price</b></button>
+              <button id="predict-btn" class="mt-20 btn action-1" style="background-color:powderblue"><b> Predict Price</b></button>
               
                 </form>
               </div>
@@ -183,9 +171,32 @@
      </div>
     
        </div>
- 
+ <div class="col-md-6">
+     <div class="row">
+         <p class="background-para">
+             Type in the features and get the predicted price of your dream house.
+         </p>
+     </div>
+
+     <div id="result">
+         <p style="color:black" class="background-para"> {{ pred }} </p>
+     </div>
+
+ </div>
  
    
     </div>
+
+    <script>
+        $("#form").on("submit", function (e){
+            if($("#yearsold").val().length != 4 || $("#yearbuilt").val().length != 4 || $("#yearremodadd").val().length !=4){
+                console.log("error");
+                e.preventDefault();
+            }else {
+                console.log("success");
+                return true;
+            }
+        })
+    </script>
 </body>
 </html>
