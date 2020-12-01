@@ -8,6 +8,9 @@ We used House Price dataset from kaggle dataset(https://www.kaggle.com/c/house-p
 ## Link to the Google Slide
 https://docs.google.com/presentation/d/1rfWITkZjMb6rclgVjF-IFZPDe-3ajrZsUKvwRUZ89hA/edit?ts=5faf2e83#slide=id.g4dfce81f19_0_45
 
+## Link to the Tableau Dashboard
+https://public.tableau.com/profile/kassie.lu#!/vizhome/AmesHousingSalesPricesDashboard/Dashboard?publish=yes
+
 ## Dataset Content
 The original dataset contains the following files:
 * ames_raw.csv - 2930 rows and 83 columns
