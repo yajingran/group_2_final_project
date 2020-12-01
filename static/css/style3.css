@@ -58,6 +58,7 @@ body
 }
 
 
+
 /*SLIDER*/
 .carousel-caption {
     bottom: 600px;
@@ -68,3 +69,12 @@ body
 .carousel-item h1{
     font-size: 50px;
 }
+
+
+body {
+    background-color: #c3cfe3;
+  }
+  
+  .wrapper {
+    background-color: white
+  }
