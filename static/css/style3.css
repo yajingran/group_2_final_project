@@ -49,12 +49,12 @@ body
 }
 .navbar .navbar-nav .nav-link:hover{
     color: white;
-    background-color: #c3cfe3;
+    background-color:#074fa6;
 
 }
 .active {
    color: #fff!important;
-   background-color: #c3cfe3;
+   background-color: #074fa6;
 }
 
 
